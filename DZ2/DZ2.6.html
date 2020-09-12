@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+
+        function getNumber(amount) {
+            let secondNumber = amount.toString().slice(-2)-amount.toString().slice(-1);
+            if (secondNumber == 10) {
+                alert("Ваша сумма в " + amount + " рублей успешно зачислена.");
+            } else {
+                let last = amount.toString().slice(-1);
+                return parseInt(last);
+            }
+        }
+
+        function sayWords(last) {
+            switch (last) {
+                case 1:
+                    alert("Ваша сумма в " + amount + " рубль успешно зачислена.");
+                    break;
+                case 0:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    alert("Ваша сумма в " + amount + " рублей успешно зачислена.");
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    alert("Ваша сумма в " + amount + " рубля успешно зачислена.");
+                    break;
+            }
+        }
+
+        let amount = +prompt("Введите денежную сумму для зачисления на счет.");
+        sayWords(getNumber(amount));
+
+    </script>
+
+</body>
+
+</html>
