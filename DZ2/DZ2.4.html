@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+
+        let a = +prompt("Введите первое число");
+        let b = +prompt("Введите второе число");
+        let c = null;
+
+        function sum(a, b) {
+            c = a + b;
+            return (c);
+        }
+
+        function diff(a, b) {
+            c = a - b;
+            return (c);
+        }
+
+        function mult(a, b) {
+            c = a * b;
+            return (c);
+        }
+
+        function divis(a, b) {
+            c = a / b;
+            return (c);
+        }
+
+        sum(a, b);
+        alert(`Сумма цифр равна ${c}`);
+
+        diff(a, b);
+        alert(`Разность цифр равна ${c}`);
+
+        mult(a, b);
+        alert(`Произведение цифр равно ${c}`);
+
+        divis(a, b);
+        alert(`Деление цифр равно ${c}`);
+
+    </script>
+
+</body>
+
+</html>
