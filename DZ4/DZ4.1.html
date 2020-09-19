@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+
+        let number = prompt("Введите число от 0 до 999");
+
+        let units;
+        let tens;
+        let hundreds;
+
+        function Post(units, tens, hundreds) {
+            this.units = +units; //это единицы 
+            this.tens = +tens; //это десятки 
+            this.hundreds = +hundreds; //это сотни
+        }
+
+        function getData(number) {
+            if(isNaN(+number) || (+number)>999 || (+number)<0 || !Number.isInteger(+number)){
+                alert("Введите целое число в диапазоне [0, 999]");
+                return;
+            }
+            if(number.length == 3){
+                hundreds = number.substr(0,1);
+                tens = number.substr(1,1);
+                units = number.toString().slice(-1);
+            }
+            if(number.length == 2){
+                hundreds = 0;
+                tens = number.substr(0,1);
+                units = number.toString().slice(-1);
+            }
+            if(number.length == 1){
+                hundreds = 0;
+                tens = 0; 
+                units = number.toString().slice(-1);
+            }
+        }
+
+        getData(number);
+
+        let objectNumber = new Post(units, tens, hundreds);
+        console.log(objectNumber);
+
+    </script>
+
+</body>
+
+</html>
