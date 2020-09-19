@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        "use strict";
+
+        class Post {
+            constructor(author, text, date) {
+                this.author = author;
+                this.text = text;
+                this.date = date;
+            }
+
+            edit(text) {
+                this.text = text; 
+            }
+        }
+
+        class AttachedPost extends Post {
+            constructor(author, text, date, highlighted) {
+                super(author, text, date);
+                this.highlighted = false
+            }
+
+            makeTextHighlighted() {
+                this.highlighted = true;
+            }
+        }
+
+        const comment1 = new Post("Mike","Sun is shining", "11.11.2011");
+        console.log(comment1);
+        comment1.edit("The weather is great");
+        console.log(comment1);
+
+        const comment2 = new AttachedPost("Luke","It's raining outside", "12.10.2012");
+        console.log(comment2);
+        comment2.makeTextHighlighted();
+        console.log(comment2);
+
+    </script>
+
+</body>
+
+</html>
