@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hamburger</title>
+</head>
+
+<body>
+    <form name="" action="" id="form">
+        <fieldset>
+            <legend>Create Hamburger</legend>
+            <div class="row">
+                <p>Choose Size</p>
+                <div class="radio-variant">
+                    <input type="radio" name="size" id="small" value="small" checked/>
+                    <label for="small">Small</label>
+                </div>
+                <div class="radio-variant">
+                    <input type="radio" name="size" id="large" value="large" />
+                    <label for="large">Large</label>
+                </div>
+            </div>
+            <div class="row additions">
+                <p>Additions</p>
+                <div class="checkbox-variant">
+                    <input type="checkbox" name="add" id="cheese" value="cheese"/>
+                    <label for="cheese">Cheese</label>
+                </div>
+                <div class="checkbox-variant">
+                    <input type="checkbox" name="add" id="salad" value="salad"/>
+                    <label for="salad">Salad</label>
+                </div>
+                <div class="checkbox-variant">
+                    <input type="checkbox" name="add" id="potato" value="potato"/>
+                    <label for="potato">Potato</label>
+                </div>
+                <p>Filling</p>
+                <div class="checkbox-variant">
+                    <input type="checkbox" name="add" id="spice" value="spice"/>
+                    <label for="spice">Spice</label>
+                </div>
+                <div class="checkbox-variant">
+                    <input type="checkbox" name="add" id="mayo" value="mayo"/>
+                    <label for="mayo">Mayonnaise</label>
+                </div>
+            </div>
+            <br/>
+            <div class="submit">
+                <input type="submit" value="Make Order" />
+            </div>
+            <br/>
+        </fieldset>
+        <br/>
+        <div id="result">
+            <div><b>Cost:</b> <span id="price">0</span> roubles</div>
+            <div><b>Calorific value:</b> <span id="calories">0</span> cal</div>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
