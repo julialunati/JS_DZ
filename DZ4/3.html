@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+<!-- 
+c. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.
+d. Текст произвольный.
+e. Если одно из полей не прошло валидацию, необходимо выделить это поле красной рамкой и сообщить пользователю об ошибке. -->
+
+<body>
+
+    <form class="decor">
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+            <h3>Написать нам</h3>
+            <input class="name" type="name" placeholder="Username">
+            <input class="telephone" type="telephone" placeholder="Telephone">
+            <input class="email" type="email" placeholder="Email">
+            <textarea placeholder="Message..." rows="3"></textarea>
+            <input class="button" type="submit" value="Отправить">
+        </div>
+    </form>
+
+    <script>
+        document.querySelector(".button").addEventListener('click', () => {
+            let str1 = document.querySelector('.name');
+            const regexp1 = /[a-zA-ZА-Яа-я]/g;
+
+            let str2 = document.querySelector('.telephone');
+            const regexp2 = /\+\d\(\d{3}\)\d{3}-\d{4}/g;
+
+            let str3 = document.querySelector('.email');
+            const regexp3 = /[a-z]{2}(.|-)?[a-z]{4}\@mail.ru/g;
+
+            if (regexp1.test(str1.value)) {
+              removeError(str1);
+            } else {
+              addError(str1);
+            }
+
+            if (regexp1.test(str2.value)) {
+              removeError(str2);
+            } else {
+              addError(str2);
+            }
+
+            if (regexp1.test(str3.value)) {
+              removeError(str3);
+            } else {
+              addError(str3);
+            }
+        });
+
+            function addError(element) {
+              element.setAttribute("style", "border: 1px solid red;");
+              alert("Вы неправильно ввели данные! Имя должно содержать только латинские или русские буквы. Телефон имеет вид +7(000)000-0000. E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или my-mail@mail.ru.")
+            };
+
+            function removeError(element) {
+              element.removeAttribute("style");
+            };
+
+
+    </script>
+</body>
+
+</html>
