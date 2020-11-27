@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BRAND</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="/highslide/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="headerInside">
+                    <div class="logo">BRAN
+                        <span class="logo-name d">D</span>
+                    </div>
+                    <div class="cart">
+                        <filter-el></filter-el>
+                        <cart ref="cart"></cart>
+                    </div>
+            </div>
+        </header>
+        <main>
+            <products ref="products"></products>
+            <error ref="error"></error>
+        </main>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/CartComp.js"></script>
+    <script src="js/ItemComp.js"></script>
+    <script src="js/ProducComp.js"></script>
+    <script src="js/FilterComp.js"></script>
+    <script src="js/ErrorComp.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
